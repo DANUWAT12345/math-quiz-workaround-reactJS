@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <h1>แบบทดสอบการแยกตัวประกอบพหุนาม</h1>
       <Quiz />
+      <p>Danuwat's teaching</p>
+      <p>Copyright © All Right Reserved</p>
     </div>
   );
 }
