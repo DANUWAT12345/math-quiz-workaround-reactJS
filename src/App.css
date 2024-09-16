@@ -40,3 +40,24 @@
 .answer-section .selected {
   background-color: #28a745;
 }
+
+.next-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  margin-top: 20px; /* Add some space on top */
+  border: none; /* Remove borders */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.next-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.next-btn:active {
+  transform: scale(0.95); /* Slightly decrease the size when clicked */
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 const Quiz = () => {
@@ -211,6 +211,11 @@ const Quiz = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [isCorrect, setIsCorrect] = useState(null);
 
+  // Reprocess MathJax every time the question changes
+  useEffect(() => {
+    window.MathJax && window.MathJax.typeset();
+  }, [currentQuestion]);
+
   const handleAnswerOptionClick = (option) => {
     setSelectedOption(option);
     if (option === questions[currentQuestion].answer) {
@@ -276,7 +281,7 @@ const Quiz = () => {
                     <MathJax>{questions[currentQuestion].answer}</MathJax>
                   </p>
                 )}
-                <button onClick={handleNextQuestion}>ข้อถัดไป</button>
+                <button className="next-btn" onClick={handleNextQuestion}>ข้อถัดไป</button>
               </div>
             )}
           </div>
